@@ -13,8 +13,8 @@ class RatingTableSeeder extends Seeder
      */
     public function run()
     {
-        $products = DB::table('Product')->get();
-        $users = DB::table('User')->get();
+        $products = DB::table('Products')->get();
+        $users = DB::table('Users')->get();
         $numOfProducts = count($products);
         $numOfUsers = count($users);
         $count_rating = [];
