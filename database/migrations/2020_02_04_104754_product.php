@@ -17,6 +17,7 @@ class Product extends Migration
             $table->Increments('id');
             $table->string('name');
             $table->float('price');
+            $table->timestamps();
         });
     }
 

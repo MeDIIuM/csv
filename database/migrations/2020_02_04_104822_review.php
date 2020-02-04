@@ -20,6 +20,7 @@ class Review extends Migration
             $table->integer('id_user');
             $table->integer('id_product');
             $table->integer('id_rating');
+            $table->timestamps();
         });
     }
 

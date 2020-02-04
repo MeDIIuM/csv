@@ -19,6 +19,7 @@ class Rating extends Migration
             $table->integer('id_user');
             $table->integer('id_product');
             $table->integer('id_review');
+            $table->timestamps();
         });
     }
 

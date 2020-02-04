@@ -18,6 +18,7 @@ class User extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('city');
+            $table->timestamps();
         });
     }
     /**
