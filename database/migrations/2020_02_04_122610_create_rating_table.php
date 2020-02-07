@@ -19,10 +19,6 @@ class CreateRatingTable extends Migration
             $table->integer('id_user');
             $table->integer('id_product');
             $table->integer('id_review');
-            //$table->foreign('id_user')->references('id')->on('Users');
-            //$table->foreign('id_product')->references('id')->on('Products');
-            //$table->foreign('id_review')->references('id')->on('Review');
-            $table->timestamps();
         });
     }
 

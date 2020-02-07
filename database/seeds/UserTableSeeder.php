@@ -20,7 +20,7 @@ class UserTableSeeder extends Seeder
             DB::table('Users')->insert([
                 'name' => $names[array_rand($names, 1)],
                 'surname' => $surname[array_rand($surname, 1)],
-                'city' => "улица " . $cities[array_rand($cities, 1)] . ' дом ' . random_int(1, 50),
+                'city' => $cities[array_rand($cities, 1)]
             ]);
         }
     }

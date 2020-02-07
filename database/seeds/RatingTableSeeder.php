@@ -17,14 +17,16 @@ class RatingTableSeeder extends Seeder
         $users = DB::table('Users')->get();
         $numOfProducts = count($products);
         $numOfUsers = count($users);
-        $count_rating = [];
-        while ((count($count_rating) < $numOfProducts) && (count($count_rating) < $numOfUsers)) {
-            DB::table('rating')->insert([
+        $count_rating = 0;
+        while (($count_rating < $numOfProducts) && ($count_rating < $numOfUsers)) {
+            DB::table('Rating')->insert([
                 "rating" => random_int(0, 10),
                 "id_product" => random_int(0, 50),
                 "id_review" => random_int(0, 50),
                 "id_user" => random_int(0, 50)
             ]);
+            $count_rating++;
         }
+
     }
 }

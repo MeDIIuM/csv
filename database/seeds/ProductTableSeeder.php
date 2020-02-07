@@ -18,7 +18,7 @@ class ProductTableSeeder extends Seeder
         for ($i = 0; $i < 50; $i++) {
             DB::table('Products')->insert([
                 'name' => $names[array_rand($names, 1)],
-                'surname' => $products[array_rand($products, 1)],
+                'price' => $products[array_rand($products, 1)],
             ]);
         }
     }
