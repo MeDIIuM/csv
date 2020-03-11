@@ -2,6 +2,6 @@
 
 @section('content')
 
-        <a  href="#">Test</a>
+    <a download='review.csv' href="/review">Test</a>
 
 @endsection

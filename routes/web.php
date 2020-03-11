@@ -12,4 +12,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ReviewController');
+Route::get('/', 'ReviewController@index');
+Route::get('/review', 'ReviewController@getReviewFile');
