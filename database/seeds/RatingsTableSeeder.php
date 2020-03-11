@@ -13,17 +13,17 @@ class RatingTableSeeder extends Seeder
      */
     public function run()
     {
-        $products = DB::table('Products')->get();
-        $users = DB::table('Users')->get();
+        $products = DB::table('products')->get();
+        $users = DB::table('users')->get();
         $numOfProducts = count($products);
         $numOfUsers = count($users);
         $count_rating = 0;
         while (($count_rating < $numOfProducts) && ($count_rating < $numOfUsers)) {
-            DB::table('Rating')->insert([
+            DB::table('ratings')->insert([
                 "rating" => random_int(0, 10),
-                "id_product" => random_int(0, 50),
-                "id_review" => random_int(0, 50),
-                "id_user" => random_int(0, 50)
+                "product_id" => random_int(0, 50),
+                "review_id" => random_int(0, 50),
+                "user_id" => random_int(0, 50)
             ]);
             $count_rating++;
         }

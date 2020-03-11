@@ -17,7 +17,7 @@ class UserTableSeeder extends Seeder
         $surname = ['Иванов', 'Петров', 'Сидоров', 'Васечкин', 'Русаков'];
         $cities = ['Волгоград', 'Самара', 'Саратов', 'Москва', 'Астрахань'];
         for ($i = 0; $i < 50; $i++) {
-            DB::table('Users')->insert([
+            DB::table('users')->insert([
                 'name' => $names[array_rand($names, 1)],
                 'surname' => $surname[array_rand($surname, 1)],
                 'city' => $cities[array_rand($cities, 1)]

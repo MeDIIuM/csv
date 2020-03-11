@@ -13,19 +13,19 @@ class ReviewTableSeeder extends Seeder
      */
     public function run()
     {
-        $products = DB::table('Products')->get();
-        $users = DB::table('Users')->get();
+        $products = DB::table('products')->get();
+        $users = DB::table('users')->get();
         $numOfProducts = count($products);
         $numOfUsers = count($users);
         $count_reviews = 0;
         $text = ['товар','очень','хороший','рекомендую','класс','уровень','настоящий','не китай','достойный','оценил','отличный'];
         while (($count_reviews < $numOfProducts) && ($count_reviews < $numOfUsers)) {
-            DB::table('ReviewController')->insert([
+            DB::table('reviews')->insert([
                 "review" =>$text[array_rand($text, 1)],
                 "likes" => random_int(0, 50),
-                "id_product" => random_int(0, 50),
-                "id_rating" => random_int(0, 50),
-                "id_user" => random_int(0, 50)
+                "product_id" => random_int(0, 50),
+                "rating_id" => random_int(0, 50),
+                "user_id" => random_int(0, 50)
             ]);
             $count_reviews++;
         }
