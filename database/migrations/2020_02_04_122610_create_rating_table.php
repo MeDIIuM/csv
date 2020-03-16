@@ -13,12 +13,12 @@ class CreateRatingTable extends Migration
      */
     public function up()
     {
-        Schema::create('Rating', function (Blueprint $table) {
+        Schema::create('ratings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('rating');
-            $table->integer('id_user');
-            $table->integer('id_product');
-            $table->integer('id_review');
+            $table->integer('user_id');
+            $table->integer('product_id');
+            $table->integer('review_id');
         });
     }
 
@@ -29,6 +29,6 @@ class CreateRatingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Rating');
+        Schema::dropIfExists('ratings');
     }
 }

@@ -13,13 +13,13 @@ class CreateReviewTable extends Migration
      */
     public function up()
     {
-        Schema::create('ReviewController', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text('review');
             $table->integer('likes');
-            $table->integer('id_user');
-            $table->integer('id_product');
-            $table->integer('id_rating');
+            $table->integer('user_id');
+            $table->integer('product_id');
+            $table->integer('rating_id');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateReviewTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ReviewController');
+        Schema::dropIfExists('reviews');
     }
 }
